@@ -23,11 +23,12 @@ int main(int argc, char *argv[])
 	symMatrix<double> mySymMatrix(dimNum);
 	MyArray<double> my_array;
 
+	gauss_seidel<double> my_GS;
+	deepDec<double> my_DS;
+
 	MyArray<double> my_ans_GS;
 	MyArray<double> my_ans_SD;
 
-	gauss_seidel<double> my_GS;
-	deepDec<double> my_DS;
 
 	ifstream in;
 
@@ -53,10 +54,10 @@ int main(int argc, char *argv[])
 				in >> my_array[i];
 
 			my_ans_GS = my_GS(mySymMatrix,my_array);
-			cout << my_ans_GS << endl;
+			cout << my_ans_GS;		
 
-			my_ans_SD=my_DS(mySymMatrix,my_array);
-			cout << my_ans_SD;
+			my_ans_SD=my_DS(mySymMatrix,my_array);	
+			cout << my_ans_SD;		
 
 
 		}

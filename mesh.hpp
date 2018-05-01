@@ -1,3 +1,9 @@
+/*
+# Mesh class implmenation
+# By: Ari Sherman & Alexn Shamore
+# Class: CS5201 final project
+# Date: 5.7.18
+*/
 template <typename T>   
 mesh<T>::mesh()
 {

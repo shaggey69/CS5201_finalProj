@@ -5,6 +5,7 @@
 # Date: 5.7.18
 */
 // operator ()
+#include <typeinfo>
 template <typename T>
 MyArray<T> gauss_seidel<T>::operator()(const symMatrix<T> & arr, const MyArray<T> & vec) const
 {
@@ -14,12 +15,20 @@ MyArray<T> gauss_seidel<T>::operator()(const symMatrix<T> & arr, const MyArray<T
 	MyArray<T> previous_Ans(vec);
 	MyArray<T> ans(arr.getSize());
 	helper(arr,vec,previous_Ans,ans);
-	//while (fabs((ans*ans)-(previous_Ans*previous_Ans)/(ans*ans)) < 0.00001)
+	//while (fabs(((ans*ans)-(previous_Ans*previous_Ans))) > 0.1)
 	for (int i = 0 ; i < 20 ; i++)
 	{
 		previous_Ans = ans;
 		helper(arr,vec,previous_Ans,ans);
-	}
+		/*
+		cout << "ans*ans is " << (ans*ans)<<endl ;
+		cout << "previous_Ans*previous_Ans is " << (previous_Ans*previous_Ans) <<endl ;
+
+		//T temp = 285.001 - previous_Ans*previous_Ans;
+
+		cout << "while cond: " << (ans*ans)-(previous_Ans*previous_Ans) << endl ;
+		*/
+	}	
 	return ans;
 }
 

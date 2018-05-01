@@ -20,15 +20,17 @@ class mesh
 {
 	private:
 		symMatrix<T> mesh_mat;
-		MyArray<T> mesh_vec;
-		T useFunc(const T x ,const T y);
+		MyArray<T> mesh_vect;
+
+		template <T T_function(T)>
+		T useFunc(const T value);
 
 	public:
 		mesh();
 		void MakeTheMartix(const int size);
-		void MakeTheVec(const int size);
+		void MakeTheVect(const int size);
 		symMatrix<T> & getMesh_mat() const {return mesh_mat; };
-		MyArray<T> & getMesh_vec() const {return mesh_vec; };
+		MyArray<T> & getMesh_vect() {return mesh_vect; };
 };
 
 #include "mesh.hpp"

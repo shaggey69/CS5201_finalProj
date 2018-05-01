@@ -27,5 +27,6 @@ clean:
 	-@rm -f ${OBJECTS} > /dev/null 2>&1
 
 # The Dependency lists!
-main.o:	 matrix.h myArray.h deepdec.h symMatrix.h mesh.h gauss_seidel.h
+main.o:	 matrix.h myArray.h deepdec.h symMatrix.h mesh.h gauss_seidel.h \
+	functions.h mesh.hpp
 

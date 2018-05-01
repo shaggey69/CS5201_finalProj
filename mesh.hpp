@@ -1,8 +1,10 @@
+#include "functions.h"
+
 template <typename T>   
 mesh<T>::mesh()
 {
 	mesh_mat.setSize(0);
-	mesh_vec.setSize(0);
+	mesh_vect.setSize(0);
 }
 
 
@@ -33,3 +35,49 @@ void mesh<T>::MakeTheMartix(const int size)
 	cout << mesh_mat;
 	return;
 }
+
+template <typename T>
+void mesh<T>::MakeTheVect(const int size)
+{
+	mesh_vect.setSize((size-1)*(size-1));
+	double stepSize = (1.0 / size);
+	T sum = 0;
+	double x, y;
+	int count = 0;
+	for(int i = 0; i < size-1; ++i)
+	{
+		y = (i + 1) * stepSize;
+		for(int j = 0; j < size-1; ++j)
+		{
+			x = (j + 1) * stepSize;
+			if(x - stepSize == 0)
+			{
+				sum += useFunc<function1>(y);
+			}
+			if(y - stepSize == 0)
+			{
+				sum += useFunc<function2>(x);
+			}
+			if(x - stepSize == 1)
+			{
+				sum += useFunc<function3>(y);
+			}
+			if(y - stepSize == 1)
+			{
+				sum += useFunc<function4>(x);
+			}
+			mesh_vect[count] = sum;
+			sum = 0;
+			count++;
+		}
+	}
+	mesh_vect = mesh_vect * .25;
+}
+
+template <typename T>
+template <T T_function(T)>
+T mesh<T>::useFunc(const T value)
+{
+	return T_function(value);
+}
+

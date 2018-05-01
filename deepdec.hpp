@@ -20,13 +20,11 @@ MyArray<T> deepDec<T>::operator()(const symMatrix<T> a,const MyArray<T> f) const
 	MyArray<T> temp3;
 	T temp1 ;
 	T temp2 ;
-
+	int number_of_iteratoins = 0;
 	resi = f - (temp);
 
 	while (resi*resi > 0.00000000001)
 	{
-			cout << " " ;
-
 		temp1 = resi*resi; 
 		temp2 = a*resi*resi;
 		T alfha =  temp1 / temp2;
@@ -34,8 +32,11 @@ MyArray<T> deepDec<T>::operator()(const symMatrix<T> a,const MyArray<T> f) const
 		x = x + (temp3);
 		temp = a*x;
 		resi = f - (temp);
+		number_of_iteratoins++;
 
 	} 
+	cout << "number_of_iteratoins for SD:" << number_of_iteratoins << endl;
+
 	return x;
 }
 

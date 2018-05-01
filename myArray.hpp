@@ -135,7 +135,7 @@ bool MyArray<T>::isZeroVec()
 template <typename T>   
 T MyArray<T>::operator*(const  MyArray<T> & rhs) const
 {
-	T retVal;
+	T retVal = 0;
 	for (int i = 0; i < rhs.getSize(); i++)
 		retVal += ptr_to_data[i]*rhs[i];
 	return retVal;
@@ -173,7 +173,7 @@ MyArray<T> MyArray<T>::operator-(const  MyArray<T> & rhs) const
 
 //streamer
 template <typename T>   
-ostream& operator<< (ostream& out , MyArray<T> & arr)
+ostream& operator<< (ostream& out , const MyArray<T> & arr)
 {
 	for (int i = 0; i < arr.getSize() ; i++)
 	{	

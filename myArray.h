@@ -27,7 +27,7 @@ class MyArray;
  *
  */
 template<class T>
-ostream& operator<< (ostream& out ,  MyArray<T> & arr);
+ostream& operator<< (ostream& out , const MyArray<T> & arr);
 
 
 /*! myArray calss
@@ -235,7 +235,7 @@ public:
  *
  */
 
-  friend ostream& operator<< <T> (ostream& out , MyArray<T> & arr);
+  friend ostream& operator<< <T> (ostream& out , const MyArray<T> & arr);
 
 }; 
 

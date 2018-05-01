@@ -52,6 +52,7 @@ class symMatrix : public Matrix<T>
 		MyArray<T> & operator[](const int i) const;
 	public:
 
+symMatrix();
    /*! initialize constructor.
 	  * A new symMatrix is craeted with dimensions
 	  * equel to "size"
@@ -162,6 +163,8 @@ class symMatrix : public Matrix<T>
 	  */
 
 		bool isDiagDom() const ;
+
+		void zeroMe();
 
 		/*! Stream insertion operator for `symMatrix`.
 		*

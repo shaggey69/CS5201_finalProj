@@ -24,8 +24,13 @@ class mesh
 		T useFunc(const T x ,const T y);
 
 	public:
+		mesh();
 		void MakeTheMartix(const int size);
 		void MakeTheVec(const int size);
-		symMatrix<T> & getMesh_mat(return mesh_mat );
-		MyArray<T> & getMesh_vec(return mesh_vec );
-}
+		symMatrix<T> & getMesh_mat() const {return mesh_mat; };
+		MyArray<T> & getMesh_vec() const {return mesh_vec; };
+};
+
+#include "mesh.hpp"
+
+#endif

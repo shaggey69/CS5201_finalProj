@@ -4,6 +4,14 @@
 # Class: CS5201 HW #6
 # Date: 4.18.18
 */
+
+template <typename T>   
+symMatrix<T>::symMatrix()
+{
+	this -> m_size = 0;
+	this -> m_matrix.setSize(0);
+}
+
 template <typename T>   
 symMatrix<T>::symMatrix(const int size)
 {
@@ -233,6 +241,20 @@ bool symMatrix<T>::isDiagDom() const
 	}
 	return true;
 }
+
+template <typename T>   
+void symMatrix<T>::zeroMe()
+{
+		int theSize = this -> m_size;
+		for (int i = 0 ; i < theSize ; i++)
+		{
+			this -> setMatrix(i,i,0) ;
+			for (int j = 0 ; j < i ; j++)
+				this -> setMatrix(i,j,0);
+		}
+	return;
+}
+
 
 template <typename T>   
 ostream& operator<<(ostream& out ,  symMatrix<T> & mat)

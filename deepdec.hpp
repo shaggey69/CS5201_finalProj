@@ -1,8 +1,8 @@
 /*
-steepest descent implmention
-By: Ari Sherman
-Class: CS5201 HW #6
-Date: 4.18.18
+# steepest descent implmentaion
+# By: Ari Sherman & Alexn Shamore
+# Class: CS5201 final project
+# Date: 5.7.18
 */
 // operator ()
 template <typename T>

@@ -11,6 +11,7 @@
 #include "myArray.h"
 #include "mesh.h"
 #include "gauss_seidel.h"
+#include "deepdec.h"
 
 
 using namespace std;
@@ -18,10 +19,15 @@ using namespace std;
 int main(int argc, char *argv[])
 {
 	int dimNum = 0;
+
 	symMatrix<double> mySymMatrix(dimNum);
 	MyArray<double> my_array;
-	MyArray<double> my_ans;
+
+	MyArray<double> my_ans_GS;
+	MyArray<double> my_ans_SD;
+
 	gauss_seidel<double> my_GS;
+	deepDec<double> my_DS;
 
 	ifstream in;
 
@@ -46,9 +52,11 @@ int main(int argc, char *argv[])
 			for (int i = 0 ; i < dimNum ; i++)
 				in >> my_array[i];
 
-			my_ans = my_GS(mySymMatrix,my_array);
-			cout << my_ans;
+			my_ans_GS = my_GS(mySymMatrix,my_array);
+			cout << my_ans_GS << endl;
 
+			my_ans_SD=my_DS(mySymMatrix,my_array);
+			cout << my_ans_SD;
 
 
 		}

@@ -27,9 +27,9 @@ class mesh
 
 	public:
 		mesh();
-		void MakeTheMartix(const int size);
+		void MakeTheMatrix(const int size);
 		void MakeTheVect(const int size);
-		symMatrix<T> & getMesh_mat() const {return mesh_mat; };
+		symMatrix<T> & getMesh_mat() {return mesh_mat; };
 		MyArray<T> & getMesh_vect() {return mesh_vect; };
 };
 

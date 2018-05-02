@@ -9,7 +9,7 @@ mesh<T>::mesh()
 
 
 template <typename T>   
-void mesh<T>::MakeTheMartix(const int size)
+void mesh<T>::MakeTheMatrix(const int size)
 {
 	int tempCounter = 0 ;
 

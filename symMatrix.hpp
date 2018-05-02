@@ -257,7 +257,7 @@ void symMatrix<T>::zeroMe()
 
 
 template <typename T>   
-ostream& operator<<(ostream& out ,  symMatrix<T> & mat)
+ostream& operator<<(ostream& out , const symMatrix<T> & mat)
 {
 	for (int i = 0 ; i < mat.m_size ; i++)
 	{

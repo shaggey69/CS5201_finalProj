@@ -5,6 +5,7 @@
 # Date: 5.7.18
 */
 // operator ()
+#include <typeinfo>
 template <typename T>
 MyArray<T> gauss_seidel<T>::operator()(const symMatrix<T> & arr, const MyArray<T> & vec) const
 {
@@ -12,14 +13,17 @@ MyArray<T> gauss_seidel<T>::operator()(const symMatrix<T> & arr, const MyArray<T
 		throw std::length_error("Matrix and array must be of same size!");
 	
 	MyArray<T> previous_Ans(vec);
+
 	MyArray<T> ans(arr.getSize());
 	helper(arr,vec,previous_Ans,ans);
-	//while (fabs((ans*ans)-(previous_Ans*previous_Ans)/(ans*ans)) < 0.00001)
-	for (int i = 0 ; i < 20 ; i++)
+	int number_of_iteratoins = 0;
+	while (fabs(((ans*ans)-(previous_Ans*previous_Ans))) > 0.00000000001)
 	{
 		previous_Ans = ans;
 		helper(arr,vec,previous_Ans,ans);
+		number_of_iteratoins++;
 	}
+	cout << "number_of_iteratoins for GS:" << number_of_iteratoins << endl;
 	return ans;
 }
 
@@ -34,13 +38,12 @@ const MyArray<T> & previous_Ans, MyArray<T> & ans) const
 		for (int j = 0 ; j < arr.getSize() ; j++)
 			if (i != j)
 			{
-				if (i > j)
+				if (i < j)
 					temp = previous_Ans[j];
 				else
 					temp = ans[j];
 				sum += arr(i,j)*temp;
 			}
-
 		ans[i] = (vec[i] - sum)/arr(i,i);
 	}
 	return;

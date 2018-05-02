@@ -1,5 +1,14 @@
+<<<<<<< HEAD
 #include "functions.h"
 
+=======
+/*
+# Mesh class implmenation
+# By: Ari Sherman & Alexn Shamore
+# Class: CS5201 final project
+# Date: 5.7.18
+*/
+>>>>>>> f2040a90271f946078a7cc7c8fe2573bdc01b652
 template <typename T>   
 mesh<T>::mesh()
 {

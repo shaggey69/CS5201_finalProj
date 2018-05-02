@@ -25,7 +25,7 @@ class symMatrix;
  *
  */
 template<class T>
-ostream& operator<< (ostream& out ,  symMatrix<T> & mat);
+ostream& operator<< (ostream& out , const symMatrix<T> & mat);
 
 /*! Stream insertion operator for `symMatrix`.
  *
@@ -175,7 +175,7 @@ symMatrix();
 		*
 		*/
 
-		friend ostream& operator<< <T> (ostream& out ,  symMatrix<T> & mat);
+		friend ostream& operator<< <T> (ostream& out , const symMatrix<T> & mat);
 		
 		/*! Stream insertion operator for `symMatrix`.
 		*

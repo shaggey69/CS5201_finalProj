@@ -16,52 +16,29 @@
 
 using namespace std;
 
-int main(int argc, char *argv[])
+int main()
 {
-	int dimNum = 0;
 
-	symMatrix<double> mySymMatrix(dimNum);
-	MyArray<double> my_array;
+	//symMatrix<double> mySymMatrix(9);
+	//MyArray<double> myArray(9);
 
 	gauss_seidel<double> my_GS;
-	deepDec<double> my_DS;
+	deepDec<double> my_SD;
 
 	MyArray<double> my_ans_GS;
 	MyArray<double> my_ans_SD;
 
+	mesh<double> myMesh(30);
 
-	ifstream in;
+	//mySymMatrix = myMesh.getMesh_mat();
+	//myArray = myMesh.getMesh_vect();
+	//cout<< mySymMatrix <<endl;
+	//cout << myArray << endl;
+	my_ans_GS =  my_GS(myMesh.getMesh_mat(),  myMesh.getMesh_vect());
+	cout << my_ans_GS << endl;
+	my_ans_SD =  my_SD(myMesh.getMesh_mat(),  myMesh.getMesh_vect());
+	cout << my_ans_SD << endl;
 
-	if (argc < 2)
-    cout << endl << "not enough inputs :(" << endl ;
-  else  if (argc > 2)    
-    cout << endl << "too many inputs :(" << endl ;
-  else
-  {
-  	in.open(argv[1]);
-		argc = 0;
-		if (!in) 
-    	cout << endl << "invailed file :("  << endl;
-		else
-		{
-			in >> dimNum;
-
-			mySymMatrix.setSize(dimNum);
-			in >> mySymMatrix;
-
-			my_array.setSize(dimNum);
-			for (int i = 0 ; i < dimNum ; i++)
-				in >> my_array[i];
-
-			my_ans_GS = my_GS(mySymMatrix,my_array);
-			cout << my_ans_GS;		
-
-			my_ans_SD=my_DS(mySymMatrix,my_array);	
-			cout << my_ans_SD;		
-
-
-		}
-	}
 
 
 

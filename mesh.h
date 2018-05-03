@@ -24,11 +24,11 @@ class mesh
 
 		template <T T_function(T)>
 		T useFunc(const T value);
-
-	public:
-		mesh();
 		void MakeTheMatrix(const int size);
 		void MakeTheVect(const int size);
+
+	public:
+		mesh(const int size);
 		symMatrix<T> & getMesh_mat() {return mesh_mat; };
 		MyArray<T> & getMesh_vect() {return mesh_vect; };
 };

@@ -1,19 +1,15 @@
-<<<<<<< HEAD
 #include "functions.h"
-
-=======
 /*
 # Mesh class implmenation
 # By: Ari Sherman & Alexn Shamore
 # Class: CS5201 final project
 # Date: 5.7.18
 */
->>>>>>> f2040a90271f946078a7cc7c8fe2573bdc01b652
 template <typename T>   
-mesh<T>::mesh()
+mesh<T>::mesh(const int size)
 {
-	mesh_mat.setSize(0);
-	mesh_vect.setSize(0);
+	MakeTheMatrix(size);
+	MakeTheVect(size);
 }
 
 
@@ -41,7 +37,6 @@ void mesh<T>::MakeTheMatrix(const int size)
 			mesh_mat.setMatrix(i,i-1, -0.25);
 		}
 	}
-	cout << mesh_mat;
 	return;
 }
 
@@ -81,6 +76,7 @@ void mesh<T>::MakeTheVect(const int size)
 		}
 	}
 	mesh_vect = mesh_vect * .25;
+
 }
 
 template <typename T>

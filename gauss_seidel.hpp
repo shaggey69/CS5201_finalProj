@@ -23,7 +23,7 @@ MyArray<T> gauss_seidel<T>::operator()(const symMatrix<T> & arr, const MyArray<T
 		helper(arr,vec,previous_Ans,ans);
 		number_of_iteratoins++;
 	}
-	cout << "number_of_iteratoins for GS:" << number_of_iteratoins << endl;
+	//cout << number_of_iteratoins;
 	return ans;
 }
 

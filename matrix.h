@@ -196,7 +196,10 @@ class Matrix
 	  * \return Will return the MyArray at index i.
 	  */
 
-		 MyArray<T> & operator[](const int i) const ;
+		 const MyArray<T> & operator[](const int i) const ;
+     
+      MyArray<T> & operator[](const int i) ;
+
 
 		/*! Matrix Scaler multiplication
 	  * caclualtes the multiplication of a matrixs with a scaler

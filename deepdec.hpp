@@ -35,7 +35,7 @@ MyArray<T> deepDec<T>::operator()(const symMatrix<T> a,const MyArray<T> f) const
 		number_of_iteratoins++;
 
 	} 
-	cout << "number_of_iteratoins for SD:" << number_of_iteratoins << endl;
+	//cout << " " << number_of_iteratoins << endl;
 
 	return x;
 }

@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <ctime>
 #include "symMatrix.h"
 #include "myArray.h"
 #include "mesh.h"
@@ -28,12 +29,19 @@ int main()
 	MyArray<double> my_ans_GS;
 	MyArray<double> my_ans_SD;
 
-	mesh<double> myMesh(4);
+/*
+	for (int i = 3 ; i < 300  ; i++)
+	{
+		int start_s=clock();
+		int stop_s=clock();
+		cout << (stop_s-start_s)/double(CLOCKS_PER_SEC)*1000 << endl;
 
-	//mySymMatrix = myMesh.getMesh_mat();
-	//myArray = myMesh.getMesh_vect();
-	//cout<< mySymMatrix <<endl;
-	//cout << myArray << endl;
+		//my_ans_GS =  my_GS(myMesh.getMesh_mat(),  myMesh.getMesh_vect());
+		//my_ans_SD =  my_SD(myMesh.getMesh_mat(),  myMesh.getMesh_vect());
+	}
+*/
+		mesh<double> myMesh(8);
+
 	my_ans_GS =  my_GS(myMesh.getMesh_mat(),  myMesh.getMesh_vect());
 	cout << my_ans_GS << endl;
 	my_ans_SD =  my_SD(myMesh.getMesh_mat(),  myMesh.getMesh_vect());

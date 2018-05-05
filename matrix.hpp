@@ -137,12 +137,21 @@ void Matrix<T>::scalerMulti(const T scaler)
 
 
 template <typename T>   
-MyArray<T> & Matrix<T>::operator[](const int i) const
+const MyArray<T> & Matrix<T>::operator[](const int i) const
 {
 	if (i < 0 || i >= m_size) 
 		throw std::length_error("i must be 0 < i <size"); 	
 	return m_matrix[i];
 }
+
+template <typename T>   
+ MyArray<T> & Matrix<T>::operator[](const int i) 
+{
+	if (i < 0 || i >= m_size) 
+		throw std::length_error("i must be 0 < i <size"); 	
+	return m_matrix[i];
+}
+
 
 
 

@@ -1,0 +1,69 @@
+\hypertarget{classmesh}{}\section{mesh$<$ T $>$ Class Template Reference}
+\label{classmesh}\index{mesh$<$ T $>$@{mesh$<$ T $>$}}
+
+
+{\ttfamily \#include $<$mesh.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmesh_a869958b6eceb09e8313bce70c3e8dc53}{mesh} (const int size)
+\item 
+\hyperlink{classsymMatrix}{sym\+Matrix}$<$ T $>$ \& \hyperlink{classmesh_a667fed9c4c02fe4acd2b4043aadc216d}{get\+Mesh\+\_\+mat} ()
+\item 
+\hyperlink{classMyArray}{My\+Array}$<$ T $>$ \& \hyperlink{classmesh_adee2e789ef5178b84d3bed2a27a4eb7f}{get\+Mesh\+\_\+vect} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\\*
+class mesh$<$ T $>$}
+
+the Mesh calculation class 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{mesh@{mesh}!mesh@{mesh}}
+\index{mesh@{mesh}!mesh@{mesh}}
+\subsubsection[{\texorpdfstring{mesh(const int size)}{mesh(const int size)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf mesh}$<$ T $>$\+::{\bf mesh} (
+\begin{DoxyParamCaption}
+\item[{const int}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{classmesh_a869958b6eceb09e8313bce70c3e8dc53}{}\label{classmesh_a869958b6eceb09e8313bce70c3e8dc53}
+initilze constructor functinos creates Poisson’s Vector and \hyperlink{classMatrix}{Matrix} with given size \begin{DoxyPrecond}{Precondition}
+size must be greater then 0. Throws length error otherwise "mesh\+\_\+vect\char`\"{} is modfied. \char`\"{}mesh\+\_\+mat" is modfied. 
+\end{DoxyPrecond}
+
+
+\subsection{Member Function Documentation}
+\index{mesh@{mesh}!get\+Mesh\+\_\+mat@{get\+Mesh\+\_\+mat}}
+\index{get\+Mesh\+\_\+mat@{get\+Mesh\+\_\+mat}!mesh@{mesh}}
+\subsubsection[{\texorpdfstring{get\+Mesh\+\_\+mat()}{getMesh_mat()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf sym\+Matrix}$<$T$>$\& {\bf mesh}$<$ T $>$\+::get\+Mesh\+\_\+mat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classmesh_a667fed9c4c02fe4acd2b4043aadc216d}{}\label{classmesh_a667fed9c4c02fe4acd2b4043aadc216d}
+get\+Mesh\+\_\+mat retuerns mesh\+\_\+mat \begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+none 
+\end{DoxyPostcond}
+\index{mesh@{mesh}!get\+Mesh\+\_\+vect@{get\+Mesh\+\_\+vect}}
+\index{get\+Mesh\+\_\+vect@{get\+Mesh\+\_\+vect}!mesh@{mesh}}
+\subsubsection[{\texorpdfstring{get\+Mesh\+\_\+vect()}{getMesh_vect()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf My\+Array}$<$T$>$\& {\bf mesh}$<$ T $>$\+::get\+Mesh\+\_\+vect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classmesh_adee2e789ef5178b84d3bed2a27a4eb7f}{}\label{classmesh_adee2e789ef5178b84d3bed2a27a4eb7f}
+get\+Mesh\+\_\+vect retuerns mesh\+\_\+vect \begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+none 
+\end{DoxyPostcond}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{mesh_8h}{mesh.\+h}\item 
+mesh.\+hpp\end{DoxyCompactItemize}

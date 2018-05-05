@@ -188,7 +188,7 @@ class Matrix
 
 		virtual MyArray<T> operator*(const MyArray<T> & rhs) const;
 
-		/*! object getter []
+		/*! object getter [] const
 	  *
 	  * \pre 0 < i < size, will throw a
 	  * a length Error otherwise
@@ -197,8 +197,16 @@ class Matrix
 	  */
 
 		 const MyArray<T> & operator[](const int i) const ;
+
+	/*! object getter [] non-const
+	  *
+	  * \pre 0 < i < size, will throw a
+	  * a length Error otherwise
+	  * \post none
+	  * \return Will return the MyArray at index i.
+	  */	 
      
-      MyArray<T> & operator[](const int i) ;
+      	 MyArray<T> & operator[](const int i) ;
 
 
 		/*! Matrix Scaler multiplication
@@ -229,10 +237,6 @@ class Matrix
 
 
 		MyArray <MyArray<T>> getMatrix() const {return m_matrix;}
-
-
-
-
 
 	 /*! get size!
 	  *

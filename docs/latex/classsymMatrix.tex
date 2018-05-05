@@ -1,0 +1,336 @@
+\hypertarget{classsymMatrix}{}\section{sym\+Matrix$<$ T $>$ Class Template Reference}
+\label{classsymMatrix}\index{sym\+Matrix$<$ T $>$@{sym\+Matrix$<$ T $>$}}
+
+
+{\ttfamily \#include $<$sym\+Matrix.\+h$>$}
+
+
+
+Inheritance diagram for sym\+Matrix$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{classsymMatrix__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for sym\+Matrix$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{classsymMatrix__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsymMatrix_a7ccbe6ae7b25b2705fdf6fce29699d26}{sym\+Matrix} (const int size)
+\item 
+\hyperlink{classsymMatrix}{sym\+Matrix}$<$ T $>$ \& \hyperlink{classsymMatrix_ae2c26b03d13d63952f6052f88869b2e2}{operator=} (const \hyperlink{classsymMatrix}{sym\+Matrix}$<$ T $>$ \&rhs)
+\item 
+\hyperlink{classMatrix}{Matrix}$<$ T $>$ \hyperlink{classsymMatrix_a47071a21daf752e9a378c593ef85dbb2}{operator+} (const \hyperlink{classMatrix}{Matrix}$<$ T $>$ \&rhs) const 
+\item 
+\hyperlink{classMatrix}{Matrix}$<$ T $>$ \hyperlink{classsymMatrix_aaa418f9273ccc5da9d01c645e78ef657}{operator-\/} (const \hyperlink{classMatrix}{Matrix}$<$ T $>$ \&rhs) const 
+\item 
+\hyperlink{classMatrix}{Matrix}$<$ T $>$ \hyperlink{classsymMatrix_a4c1a9a20ab9bd68aca9f9d35d25e0e36}{operator$\ast$} (const \hyperlink{classMatrix}{Matrix}$<$ T $>$ \&rhs) const 
+\item 
+\hyperlink{classMyArray}{My\+Array}$<$ T $>$ \hyperlink{classsymMatrix_aa7adbc9378944126e08af6072ff648eb}{operator$\ast$} (const \hyperlink{classMyArray}{My\+Array}$<$ T $>$ \&rhs) const 
+\item 
+void \hyperlink{classsymMatrix_a75cb07e28a2ef936e45a7e3324429667}{scaler\+Multi} (const T scaler)
+\item 
+void \hyperlink{classsymMatrix_a06379c2668a6b1fba8b133d753a8f57c}{set\+Size} (const int size)
+\item 
+\hyperlink{classsymMatrix}{sym\+Matrix}$<$ T $>$ \hyperlink{classsymMatrix_aa3cfa46104ea3a5a6095ab20668a5445}{transpose} ()
+\item 
+void \hyperlink{classsymMatrix_a28d1f286c0a8572a26441afd635cba51}{set\+Matrix} (const int i, const int j, const T x)
+\item 
+T \hyperlink{classsymMatrix_a92bbf3194f8bf52559ee19ba706dd15c}{operator()} (const int i, const int j) const 
+\item 
+bool \hyperlink{classsymMatrix_a43d26e87d92d368544b9bd6384da8121}{is\+Diag\+Dom} () const 
+\item 
+void \hyperlink{classsymMatrix_adaa6f70fb421576d245f86c526b64ac1}{zero\+Me} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classsymMatrix_ab9fec73436f9148b1f7a85da84930bdf}{operator} (ostream \&out, const \hyperlink{classsymMatrix}{sym\+Matrix}$<$ T $>$ \&mat)
+\item 
+istream \& \hyperlink{classsymMatrix_a8a4d48a6277b6f343afee06fcb29ea53}{operator$>$$>$} (istream \&in, \hyperlink{classsymMatrix}{sym\+Matrix}$<$ T $>$ \&mat)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\\*
+class sym\+Matrix$<$ T $>$}
+
+\hyperlink{classsymMatrix}{sym\+Matrix} calss Reprents a NxN \hyperlink{classsymMatrix}{sym\+Matrix} \hyperlink{classMatrix}{Matrix} contains a\+: m\+\_\+size -\/ represting the size of N m\+\_\+matrix -\/ an my\+Array of my\+Arrays represting the matrix 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{sym\+Matrix@{sym\+Matrix}!sym\+Matrix@{sym\+Matrix}}
+\index{sym\+Matrix@{sym\+Matrix}!sym\+Matrix@{sym\+Matrix}}
+\subsubsection[{\texorpdfstring{sym\+Matrix(const int size)}{symMatrix(const int size)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf sym\+Matrix}$<$ T $>$\+::{\bf sym\+Matrix} (
+\begin{DoxyParamCaption}
+\item[{const int}]{size}
+\end{DoxyParamCaption}
+)}\hypertarget{classsymMatrix_a7ccbe6ae7b25b2705fdf6fce29699d26}{}\label{classsymMatrix_a7ccbe6ae7b25b2705fdf6fce29699d26}
+initialize constructor. A new \hyperlink{classsymMatrix}{sym\+Matrix} is craeted with dimensions equel to \char`\"{}size\char`\"{} \begin{DoxyPrecond}{Precondition}
+size must be bigger then 0! Will throw a a length Error otherwise 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a \hyperlink{classsymMatrix}{sym\+Matrix} is born! 
+\end{DoxyPostcond}
+
+
+\subsection{Member Function Documentation}
+\index{sym\+Matrix@{sym\+Matrix}!is\+Diag\+Dom@{is\+Diag\+Dom}}
+\index{is\+Diag\+Dom@{is\+Diag\+Dom}!sym\+Matrix@{sym\+Matrix}}
+\subsubsection[{\texorpdfstring{is\+Diag\+Dom() const }{isDiagDom() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf sym\+Matrix}$<$ T $>$\+::is\+Diag\+Dom (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classsymMatrix_a43d26e87d92d368544b9bd6384da8121}{}\label{classsymMatrix_a43d26e87d92d368544b9bd6384da8121}
+is diagonally dominant returns true if matrix is diagonally dominant. false otherwise. \begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+none 
+\end{DoxyPostcond}
+
+
+Reimplemented from \hyperlink{classMatrix_ab5deedc9644d1b8c6bc220dd336f0102}{Matrix$<$ T $>$}.
+
+\index{sym\+Matrix@{sym\+Matrix}!operator()@{operator()}}
+\index{operator()@{operator()}!sym\+Matrix@{sym\+Matrix}}
+\subsubsection[{\texorpdfstring{operator()(const int i, const int j) const }{operator()(const int i, const int j) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T {\bf sym\+Matrix}$<$ T $>$\+::{\bf operator}() (
+\begin{DoxyParamCaption}
+\item[{const int}]{i, }
+\item[{const int}]{j}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classsymMatrix_a92bbf3194f8bf52559ee19ba706dd15c}{}\label{classsymMatrix_a92bbf3194f8bf52559ee19ba706dd15c}
+operaotr () returns value of m\+\_\+matrix\mbox{[}i\mbox{]}\mbox{[}j\mbox{]} \begin{DoxyPrecond}{Precondition}
+0 $<$ i,j $<$size 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+none 
+\end{DoxyPostcond}
+
+
+Reimplemented from \hyperlink{classMatrix_af786e95d49ae55d42c3bd6824a64e032}{Matrix$<$ T $>$}.
+
+\index{sym\+Matrix@{sym\+Matrix}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!sym\+Matrix@{sym\+Matrix}}
+\subsubsection[{\texorpdfstring{operator$\ast$(const Matrix$<$ T $>$ \&rhs) const }{operator*(const Matrix< T > &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Matrix}$<$ T $>$ {\bf sym\+Matrix}$<$ T $>$\+::{\bf operator}$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Matrix}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classsymMatrix_a4c1a9a20ab9bd68aca9f9d35d25e0e36}{}\label{classsymMatrix_a4c1a9a20ab9bd68aca9f9d35d25e0e36}
+\hyperlink{classMatrix}{Matrix} multiplication caclualtes the multiplication of \hyperlink{classsymMatrix}{sym\+Matrix} and matrix, returens a new matrix with the calculated values \begin{DoxyPrecond}{Precondition}
+size of CO must be equel to rhs, Will throw a a length Error otherwise. \char`\"{}$\ast$\char`\"{} binary operator must be defiend for T. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a matrix is born! 
+\end{DoxyPostcond}
+
+
+Reimplemented from \hyperlink{classMatrix_a358516deb804403fb91256a5a269d1e2}{Matrix$<$ T $>$}.
+
+\index{sym\+Matrix@{sym\+Matrix}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!sym\+Matrix@{sym\+Matrix}}
+\subsubsection[{\texorpdfstring{operator$\ast$(const My\+Array$<$ T $>$ \&rhs) const }{operator*(const MyArray< T > &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf My\+Array}$<$ T $>$ {\bf sym\+Matrix}$<$ T $>$\+::{\bf operator}$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf My\+Array}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classsymMatrix_aa7adbc9378944126e08af6072ff648eb}{}\label{classsymMatrix_aa7adbc9378944126e08af6072ff648eb}
+\hyperlink{classMatrix}{Matrix} -\/ Vector multiplication caclualtes the multiplication of a \hyperlink{classsymMatrix}{sym\+Matrix} with an Array and returens a new Vector with the calculated values \begin{DoxyPrecond}{Precondition}
+size of CO must be equel to rhs array size! Will throw a a length Error otherwise. \char`\"{}$\ast$\char`\"{} binary operator must be defiend for T. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a Vector is born! 
+\end{DoxyPostcond}
+
+
+Reimplemented from \hyperlink{classMatrix_a70c46247336f74291cc3e1b2fb800a34}{Matrix$<$ T $>$}.
+
+\index{sym\+Matrix@{sym\+Matrix}!operator+@{operator+}}
+\index{operator+@{operator+}!sym\+Matrix@{sym\+Matrix}}
+\subsubsection[{\texorpdfstring{operator+(const Matrix$<$ T $>$ \&rhs) const }{operator+(const Matrix< T > &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Matrix}$<$ T $>$ {\bf sym\+Matrix}$<$ T $>$\+::{\bf operator}+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Matrix}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classsymMatrix_a47071a21daf752e9a378c593ef85dbb2}{}\label{classsymMatrix_a47071a21daf752e9a378c593ef85dbb2}
+
+\begin{DoxyItemize}
+\item operator adds the sum of CO to rhs, retures a new \hyperlink{classMatrix}{Matrix} with the calculated values \begin{DoxyPrecond}{Precondition}
+size of CO must be equel to rhs, Will throw a a length Error otherwise. \char`\"{}+\char`\"{} binary operator must be defiend for T. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a matrix is born! 
+\end{DoxyPostcond}
+
+\end{DoxyItemize}
+
+Reimplemented from \hyperlink{classMatrix_a9db4b4074daa2112eab910c7902fc5d9}{Matrix$<$ T $>$}.
+
+\index{sym\+Matrix@{sym\+Matrix}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!sym\+Matrix@{sym\+Matrix}}
+\subsubsection[{\texorpdfstring{operator-\/(const Matrix$<$ T $>$ \&rhs) const }{operator-(const Matrix< T > &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Matrix}$<$ T $>$ {\bf sym\+Matrix}$<$ T $>$\+::{\bf operator}-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Matrix}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classsymMatrix_aaa418f9273ccc5da9d01c645e78ef657}{}\label{classsymMatrix_aaa418f9273ccc5da9d01c645e78ef657}
+
+\begin{DoxyItemize}
+\item operator caclualtes the differnce of CO to rhs, retures a new \hyperlink{classMatrix}{Matrix} with the calculated values \begin{DoxyPrecond}{Precondition}
+size of CO must be equel to rhs, Will throw a a length Error otherwise. \char`\"{}-\/\char`\"{} binary operator must be defiend for T. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a matrix is born! 
+\end{DoxyPostcond}
+
+\end{DoxyItemize}
+
+Reimplemented from \hyperlink{classMatrix_a06a7f018ed353f0a8239a80ec8403be6}{Matrix$<$ T $>$}.
+
+\index{sym\+Matrix@{sym\+Matrix}!operator=@{operator=}}
+\index{operator=@{operator=}!sym\+Matrix@{sym\+Matrix}}
+\subsubsection[{\texorpdfstring{operator=(const sym\+Matrix$<$ T $>$ \&rhs)}{operator=(const symMatrix< T > &rhs)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf sym\+Matrix}$<$ T $>$ \& {\bf sym\+Matrix}$<$ T $>$\+::{\bf operator}= (
+\begin{DoxyParamCaption}
+\item[{const {\bf sym\+Matrix}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)}\hypertarget{classsymMatrix_ae2c26b03d13d63952f6052f88869b2e2}{}\label{classsymMatrix_ae2c26b03d13d63952f6052f88869b2e2}
+= assignment turns the CO \hyperlink{classsymMatrix}{sym\+Matrix} into R\+HS \hyperlink{classsymMatrix}{sym\+Matrix} \begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+none 
+\end{DoxyPostcond}
+\index{sym\+Matrix@{sym\+Matrix}!scaler\+Multi@{scaler\+Multi}}
+\index{scaler\+Multi@{scaler\+Multi}!sym\+Matrix@{sym\+Matrix}}
+\subsubsection[{\texorpdfstring{scaler\+Multi(const T scaler)}{scalerMulti(const T scaler)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf sym\+Matrix}$<$ T $>$\+::scaler\+Multi (
+\begin{DoxyParamCaption}
+\item[{const T}]{scaler}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classsymMatrix_a75cb07e28a2ef936e45a7e3324429667}{}\label{classsymMatrix_a75cb07e28a2ef936e45a7e3324429667}
+\hyperlink{classMatrix}{Matrix} Scaler multiplication caclualtes the multiplication of a \hyperlink{classsymMatrix}{sym\+Matrix} with a scaler and modifies the CO m\+\_\+matrix with calculation \begin{DoxyPrecond}{Precondition}
+\char`\"{}$\ast$\char`\"{} binary operator must be defiend for T. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+none 
+\end{DoxyPostcond}
+
+
+Reimplemented from \hyperlink{classMatrix_aba8c673e5ca3bcc56a9bad1a1c0fed23}{Matrix$<$ T $>$}.
+
+\index{sym\+Matrix@{sym\+Matrix}!set\+Matrix@{set\+Matrix}}
+\index{set\+Matrix@{set\+Matrix}!sym\+Matrix@{sym\+Matrix}}
+\subsubsection[{\texorpdfstring{set\+Matrix(const int i, const int j, const T x)}{setMatrix(const int i, const int j, const T x)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf sym\+Matrix}$<$ T $>$\+::set\+Matrix (
+\begin{DoxyParamCaption}
+\item[{const int}]{i, }
+\item[{const int}]{j, }
+\item[{const T}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classsymMatrix_a28d1f286c0a8572a26441afd635cba51}{}\label{classsymMatrix_a28d1f286c0a8572a26441afd635cba51}
+Set \hyperlink{classMatrix}{Matrix} changes the value of m\+\_\+matrix\mbox{[}i\mbox{]}\mbox{[}j\mbox{]} and m\+\_\+matrix\mbox{[}j\mbox{]}\mbox{[}i\mbox{]} to x \begin{DoxyPrecond}{Precondition}
+0 $<$ i,j $<$size 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+modified m\+\_\+matrix 
+\end{DoxyPostcond}
+
+
+Reimplemented from \hyperlink{classMatrix_a0cf31a462707441cbbab037190c88f33}{Matrix$<$ T $>$}.
+
+\index{sym\+Matrix@{sym\+Matrix}!set\+Size@{set\+Size}}
+\index{set\+Size@{set\+Size}!sym\+Matrix@{sym\+Matrix}}
+\subsubsection[{\texorpdfstring{set\+Size(const int size)}{setSize(const int size)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf sym\+Matrix}$<$ T $>$\+::set\+Size (
+\begin{DoxyParamCaption}
+\item[{const int}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classsymMatrix_a06379c2668a6b1fba8b133d753a8f57c}{}\label{classsymMatrix_a06379c2668a6b1fba8b133d753a8f57c}
+set size!
+
+\begin{DoxyPrecond}{Precondition}
+s must be postive 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+none 
+\end{DoxyPostcond}
+
+
+Reimplemented from \hyperlink{classMatrix_a1add3e066eaaa19d5056fc6e2cbc767c}{Matrix$<$ T $>$}.
+
+\index{sym\+Matrix@{sym\+Matrix}!transpose@{transpose}}
+\index{transpose@{transpose}!sym\+Matrix@{sym\+Matrix}}
+\subsubsection[{\texorpdfstring{transpose()}{transpose()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf sym\+Matrix}$<$ T $>$ {\bf sym\+Matrix}$<$ T $>$\+::transpose (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classsymMatrix_aa3cfa46104ea3a5a6095ab20668a5445}{}\label{classsymMatrix_aa3cfa46104ea3a5a6095ab20668a5445}
+\hyperlink{classMatrix}{Matrix} transpose calculator Creates a new matrix with is a trasposed version of the CO \begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a \hyperlink{classMatrix}{Matrix} is born 
+\end{DoxyPostcond}
+\index{sym\+Matrix@{sym\+Matrix}!zero\+Me@{zero\+Me}}
+\index{zero\+Me@{zero\+Me}!sym\+Matrix@{sym\+Matrix}}
+\subsubsection[{\texorpdfstring{zero\+Me()}{zeroMe()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf sym\+Matrix}$<$ T $>$\+::zero\+Me (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classsymMatrix_adaa6f70fb421576d245f86c526b64ac1}{}\label{classsymMatrix_adaa6f70fb421576d245f86c526b64ac1}
+zero\+Me fills the matrix with the zero value \begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+m\+\_\+matrix is modified 
+\end{DoxyPostcond}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{sym\+Matrix@{sym\+Matrix}!operator@{operator}}
+\index{operator@{operator}!sym\+Matrix@{sym\+Matrix}}
+\subsubsection[{\texorpdfstring{operator}{operator}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ ostream\& operator (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{out, }
+\item[{const {\bf sym\+Matrix}$<$ T $>$ \&}]{mat}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classsymMatrix_ab9fec73436f9148b1f7a85da84930bdf}{}\label{classsymMatrix_ab9fec73436f9148b1f7a85da84930bdf}
+Stream insertion operator for {\ttfamily \hyperlink{classsymMatrix}{sym\+Matrix}}.
+
+\begin{DoxyPrecond}{Precondition}
+Stream insertion operator is defined for {\ttfamily T}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The contents of the m\+\_\+matrix are printed to the ouptut stream. Each array is printed on a new row. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+the modified output stream. 
+\end{DoxyReturn}
+\index{sym\+Matrix@{sym\+Matrix}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!sym\+Matrix@{sym\+Matrix}}
+\subsubsection[{\texorpdfstring{operator$>$$>$}{operator>>}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ istream\& {\bf operator}$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{istream \&}]{in, }
+\item[{{\bf sym\+Matrix}$<$ T $>$ \&}]{mat}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classsymMatrix_a8a4d48a6277b6f343afee06fcb29ea53}{}\label{classsymMatrix_a8a4d48a6277b6f343afee06fcb29ea53}
+Stream insertion operator for {\ttfamily \hyperlink{classsymMatrix}{sym\+Matrix}}.
+
+\begin{DoxyPrecond}{Precondition}
+Stream insertion operator is defined for {\ttfamily T}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+the m\+\_\+matrix if filled with the input 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+the modified input stream. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{symMatrix_8h}{sym\+Matrix.\+h}\item 
+sym\+Matrix.\+hpp\end{DoxyCompactItemize}

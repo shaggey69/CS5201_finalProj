@@ -20,35 +20,34 @@ using namespace std;
 int main()
 {
 
-	//symMatrix<double> mySymMatrix(9);
-	//MyArray<double> myArray(9);
+	symMatrix<double> mySymMatrix(9);
+	MyArray<double> myArray(9);
 
-	gauss_seidel<double> my_GS;
+
 	deepDec<double> my_SD;
+	gauss_seidel<double> my_GS;
 
 	MyArray<double> my_ans_GS;
 	MyArray<double> my_ans_SD;
 
-/*
-	for (int i = 3 ; i < 300  ; i++)
-	{
-		int start_s=clock();
-		int stop_s=clock();
-		cout << (stop_s-start_s)/double(CLOCKS_PER_SEC)*1000 << endl;
 
-		//my_ans_GS =  my_GS(myMesh.getMesh_mat(),  myMesh.getMesh_vect());
-		//my_ans_SD =  my_SD(myMesh.getMesh_mat(),  myMesh.getMesh_vect());
-	}
-*/
-		mesh<double> myMesh(8);
+	mesh<double> myMesh(4);
 
-	my_ans_GS =  my_GS(myMesh.getMesh_mat(),  myMesh.getMesh_vect());
-	cout << my_ans_GS << endl;
-	my_ans_SD =  my_SD(myMesh.getMesh_mat(),  myMesh.getMesh_vect());
-	cout << my_ans_SD << endl;
+	myArray =  myMesh.getMesh_vect();
+
+	mySymMatrix = myMesh.getMesh_mat();
 
 
+	my_ans_GS =  my_GS(mySymMatrix,  myArray) ;
 
+	my_ans_SD =  my_SD(mySymMatrix, myArray);
+
+	cout << setprecision(8);
+
+	cout << myArray << endl;
+	cout << mySymMatrix << endl;
+	cout << my_ans_GS << endl ;
+	cout << my_ans_SD << endl ;
 
 	return 0;
 }

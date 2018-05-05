@@ -1,0 +1,76 @@
+\hypertarget{symMatrix_8h}{}\section{sym\+Matrix.\+h File Reference}
+\label{symMatrix_8h}\index{sym\+Matrix.\+h@{sym\+Matrix.\+h}}
+{\ttfamily \#include \char`\"{}matrix.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}sym\+Matrix.\+hpp\char`\"{}}\\*
+Include dependency graph for sym\+Matrix.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{symMatrix_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{symMatrix_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classsymMatrix}{sym\+Matrix$<$ T $>$}
+\item 
+class \hyperlink{classsymMatrix}{sym\+Matrix$<$ T $>$}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\ostream \& \hyperlink{symMatrix_8h_a47c6313276439b28a6fa0473ab7cd798}{operator$<$$<$} (ostream \&out, const \hyperlink{classsymMatrix}{sym\+Matrix}$<$ T $>$ \&mat)
+\item 
+{\footnotesize template$<$class T $>$ }\\istream \& \hyperlink{symMatrix_8h_a17cb2fcfa986c7c501dc2fcc28c421db}{operator$>$$>$} (istream \&in, \hyperlink{classsymMatrix}{sym\+Matrix}$<$ T $>$ \&mat)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+the symmatric matrix class 
+
+\subsection{Function Documentation}
+\index{sym\+Matrix.\+h@{sym\+Matrix.\+h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!sym\+Matrix.\+h@{sym\+Matrix.\+h}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(ostream \&out, const sym\+Matrix$<$ T $>$ \&mat)}{operator<<(ostream &out, const symMatrix< T > &mat)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{out, }
+\item[{const {\bf sym\+Matrix}$<$ T $>$ \&}]{mat}
+\end{DoxyParamCaption}
+)}\hypertarget{symMatrix_8h_a47c6313276439b28a6fa0473ab7cd798}{}\label{symMatrix_8h_a47c6313276439b28a6fa0473ab7cd798}
+Stream insertion operator for {\ttfamily \hyperlink{classsymMatrix}{sym\+Matrix}}.
+
+\begin{DoxyPrecond}{Precondition}
+Stream insertion operator is defined for {\ttfamily T}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The contents of the m\+\_\+matrix are printed to the ouptut stream. Each array is printed on a new row. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+the modified output stream. 
+\end{DoxyReturn}
+\index{sym\+Matrix.\+h@{sym\+Matrix.\+h}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!sym\+Matrix.\+h@{sym\+Matrix.\+h}}
+\subsubsection[{\texorpdfstring{operator$>$$>$(istream \&in, sym\+Matrix$<$ T $>$ \&mat)}{operator>>(istream &in, symMatrix< T > &mat)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{istream \&}]{in, }
+\item[{{\bf sym\+Matrix}$<$ T $>$ \&}]{mat}
+\end{DoxyParamCaption}
+)}\hypertarget{symMatrix_8h_a17cb2fcfa986c7c501dc2fcc28c421db}{}\label{symMatrix_8h_a17cb2fcfa986c7c501dc2fcc28c421db}
+Stream insertion operator for {\ttfamily \hyperlink{classsymMatrix}{sym\+Matrix}}.
+
+\begin{DoxyPrecond}{Precondition}
+Stream insertion operator is defined for {\ttfamily T}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+the m\+\_\+matrix if filled with the input 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+the modified input stream. 
+\end{DoxyReturn}

@@ -4,7 +4,7 @@
 # Class: CS5201 HW #6
 # Date: 4.18.18
 */
-
+#include <iomanip>
 template <typename T>   
 symMatrix<T>::symMatrix()
 {
@@ -29,13 +29,15 @@ template <typename T>
 symMatrix<T> & symMatrix<T>::operator= (const symMatrix<T> & rhs) 
 {
 	this -> clear();
-	this -> m_size = rhs.getSize();
+	this -> setSize(rhs.getSize());
+
 	for (int i = 0 ; i < rhs.getSize() ; i++)
 		{
 			this -> m_matrix[i][i] = rhs(i,i);
 			for (int j = 0 ; j < i ; j++)
 				this -> m_matrix[i][j] = rhs(i,j);
 		}
+
 	return *this;
 }
 
@@ -259,10 +261,13 @@ void symMatrix<T>::zeroMe()
 template <typename T>   
 ostream& operator<<(ostream& out , const symMatrix<T> & mat)
 {
+
+
 	for (int i = 0 ; i < mat.m_size ; i++)
 	{
 		for (int j = 0 ; j < mat.m_size ; j++)
 		{
+			out << std::setw(15);
 			if ( i==j )
 				out << mat.m_matrix[i][i] << " ";
 			else if (j > i)
@@ -277,7 +282,8 @@ ostream& operator<<(ostream& out , const symMatrix<T> & mat)
 
 template <typename T>   
 istream& operator>>(istream& in ,  symMatrix<T> & mat)
-{
+{ 
+
 	T trash = 0;
 	for (int i = 0 ; i < mat.m_size ; i++)
 	{

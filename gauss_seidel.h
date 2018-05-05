@@ -26,17 +26,27 @@
 template <typename T>
 class gauss_seidel
 {
+
+	private:
+
+	/*! helper
+	* inernal function that helps operator() do calculations. 
+    */
+
+	void helper (const symMatrix<T> & arr,const MyArray<T> & vec,
+		const MyArray<T> & previous_Ans, MyArray<T> & ans) const;
+	
 	public:
 
 	/*! Operator () calculator!
-  * \pre T must have the: "*" "/" "-" binary operators defiend for it
+  * \pre T must have the: "*" "/" "+=" binary operators defiend for it
   * \post a New Array<T> is born
-  *	\return steepest descent result for Ax=b. Where A is the Symetric Matrix and 
+  *	\return Gauss-Seidel result for Ax=b. Where A is the Symetric Matrix and 
   * b is the Array
   */
 	MyArray<T> operator()(const symMatrix<T> & arr, const MyArray<T> & vec) const;
-	void helper (const symMatrix<T> & arr,const MyArray<T> & vec,
-		const MyArray<T> & previous_Ans, MyArray<T> & ans) const;
+
+
 };
 #include "gauss_seidel.hpp"
 #endif

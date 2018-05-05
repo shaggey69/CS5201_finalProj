@@ -1,0 +1,83 @@
+\hypertarget{matrix_8h}{}\section{matrix.\+h File Reference}
+\label{matrix_8h}\index{matrix.\+h@{matrix.\+h}}
+{\ttfamily \#include \char`\"{}my\+Array.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include $<$iomanip$>$}\\*
+{\ttfamily \#include $<$stdexcept$>$}\\*
+{\ttfamily \#include \char`\"{}matrix.\+hpp\char`\"{}}\\*
+Include dependency graph for matrix.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{matrix_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{matrix_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classMatrix}{Matrix$<$ T $>$}
+\item 
+class \hyperlink{classMatrix}{Matrix$<$ T $>$}
+\item 
+class \hyperlink{classCompare}{Compare$<$ T $>$}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\ostream \& \hyperlink{matrix_8h_aabfdf243bf6d7e452fcef8553c128096}{operator$<$$<$} (ostream \&out, \hyperlink{classMatrix}{Matrix}$<$ T $>$ \&mat)
+\item 
+{\footnotesize template$<$class T $>$ }\\istream \& \hyperlink{matrix_8h_a9a32964bf1d2e4e86dd2d34bc310bdcf}{operator$>$$>$} (istream \&in, \hyperlink{classMatrix}{Matrix}$<$ T $>$ \&mat)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A \hyperlink{classMatrix}{Matrix} class. 
+
+\subsection{Function Documentation}
+\index{matrix.\+h@{matrix.\+h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!matrix.\+h@{matrix.\+h}}
+\subsubsection[{\texorpdfstring{operator$<$$<$(ostream \&out, Matrix$<$ T $>$ \&mat)}{operator<<(ostream &out, Matrix< T > &mat)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{out, }
+\item[{{\bf Matrix}$<$ T $>$ \&}]{mat}
+\end{DoxyParamCaption}
+)}\hypertarget{matrix_8h_aabfdf243bf6d7e452fcef8553c128096}{}\label{matrix_8h_aabfdf243bf6d7e452fcef8553c128096}
+Stream insertion operator for {\ttfamily \hyperlink{classMatrix}{Matrix}}.
+
+\begin{DoxyPrecond}{Precondition}
+Stream insertion operator is defined for {\ttfamily T}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The contents of the m\+\_\+matrix are printed to the ouptut stream. Each array is printed on a new row. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+the modified output stream. 
+\end{DoxyReturn}
+\index{matrix.\+h@{matrix.\+h}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!matrix.\+h@{matrix.\+h}}
+\subsubsection[{\texorpdfstring{operator$>$$>$(istream \&in, Matrix$<$ T $>$ \&mat)}{operator>>(istream &in, Matrix< T > &mat)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{istream \&}]{in, }
+\item[{{\bf Matrix}$<$ T $>$ \&}]{mat}
+\end{DoxyParamCaption}
+)}\hypertarget{matrix_8h_a9a32964bf1d2e4e86dd2d34bc310bdcf}{}\label{matrix_8h_a9a32964bf1d2e4e86dd2d34bc310bdcf}
+Stream insertion operator for {\ttfamily \hyperlink{classMatrix}{Matrix}}.
+
+\begin{DoxyPrecond}{Precondition}
+Stream insertion operator is defined for {\ttfamily T}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+the m\+\_\+matrix if filled with the input 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+the modified input stream. 
+\end{DoxyReturn}

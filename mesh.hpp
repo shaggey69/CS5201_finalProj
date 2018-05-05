@@ -8,6 +8,8 @@
 template <typename T>   
 mesh<T>::mesh(const int size)
 {
+	if (size < 0)
+		throw std::length_error("size must be greater then zero");
 	MakeTheMatrix(size);
 	MakeTheVect(size);
 }

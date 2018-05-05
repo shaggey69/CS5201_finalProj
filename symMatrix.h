@@ -164,6 +164,12 @@ symMatrix();
 
 		bool isDiagDom() const ;
 
+	/*! zeroMe
+	  * fills the matrix with the zero value 
+	  * \pre none
+	  * \post m_matrix is modified 
+	  */
+
 		void zeroMe();
 
 		/*! Stream insertion operator for `symMatrix`.

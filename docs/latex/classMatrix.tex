@@ -1,0 +1,501 @@
+\hypertarget{classMatrix}{}\section{Matrix$<$ T $>$ Class Template Reference}
+\label{classMatrix}\index{Matrix$<$ T $>$@{Matrix$<$ T $>$}}
+
+
+{\ttfamily \#include $<$matrix.\+h$>$}
+
+
+
+Inheritance diagram for Matrix$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{classMatrix__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Matrix$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{classMatrix__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMatrix_a9d567e3a121b1be0c3f9c461cab524fe}{Matrix} ()
+\item 
+\hyperlink{classMatrix_a19ffa179320a60ab6aeb0910f062895f}{Matrix} (const int n)
+\item 
+\hyperlink{classMatrix_a6a46705243036bfeee78fe2c84c54340}{Matrix} (const \hyperlink{classMatrix}{Matrix}$<$ T $>$ \&rhs)
+\item 
+\hyperlink{classMatrix_a91aa704de674203e96aece9e1955ccd3}{$\sim$\+Matrix} ()
+\item 
+virtual \hyperlink{classMatrix}{Matrix}$<$ T $>$ \& \hyperlink{classMatrix_a01990eb2552555d37c83272125be68e6}{operator=} (const \hyperlink{classMatrix}{Matrix}$<$ T $>$ \&rhs)
+\item 
+\hyperlink{classMatrix_ac503fc6ce19453907fd9ad85133fef39}{Matrix} (\hyperlink{classMatrix}{Matrix} \&\&rhs)
+\item 
+virtual \hyperlink{classMatrix}{Matrix}$<$ T $>$ \hyperlink{classMatrix_a9db4b4074daa2112eab910c7902fc5d9}{operator+} (const \hyperlink{classMatrix}{Matrix}$<$ T $>$ \&rhs) const 
+\item 
+virtual \hyperlink{classMatrix}{Matrix}$<$ T $>$ \hyperlink{classMatrix_a06a7f018ed353f0a8239a80ec8403be6}{operator-\/} (const \hyperlink{classMatrix}{Matrix}$<$ T $>$ \&rhs) const 
+\item 
+virtual \hyperlink{classMatrix}{Matrix}$<$ T $>$ \hyperlink{classMatrix_a358516deb804403fb91256a5a269d1e2}{operator$\ast$} (const \hyperlink{classMatrix}{Matrix}$<$ T $>$ \&rhs) const 
+\item 
+virtual \hyperlink{classMyArray}{My\+Array}$<$ T $>$ \hyperlink{classMatrix_a70c46247336f74291cc3e1b2fb800a34}{operator$\ast$} (const \hyperlink{classMyArray}{My\+Array}$<$ T $>$ \&rhs) const 
+\item 
+const \hyperlink{classMyArray}{My\+Array}$<$ T $>$ \& \hyperlink{classMatrix_a7b67f79f397146216c40197642ee4a44}{operator\mbox{[}$\,$\mbox{]}} (const int i) const 
+\item 
+\hyperlink{classMyArray}{My\+Array}$<$ T $>$ \& \hyperlink{classMatrix_a0d41726a8cfe08d0339f29a5b956f319}{operator\mbox{[}$\,$\mbox{]}} (const int i)
+\item 
+virtual void \hyperlink{classMatrix_aba8c673e5ca3bcc56a9bad1a1c0fed23}{scaler\+Multi} (const T scaler)
+\item 
+virtual void \hyperlink{classMatrix_a23bb949d4b4256dd253808e35d73d4b9}{switch\+Rows} (const int i, const int j)
+\item 
+\hyperlink{classMyArray}{My\+Array}$<$ \hyperlink{classMyArray}{My\+Array}$<$ T $>$ $>$ \hyperlink{classMatrix_afba2ee1c4e106b78099350d070ae1e51}{get\+Matrix} () const 
+\item 
+int \hyperlink{classMatrix_aa5d12d49bec4b4876f1a60c54a197ed7}{get\+Size} () const 
+\item 
+virtual void \hyperlink{classMatrix_a1add3e066eaaa19d5056fc6e2cbc767c}{set\+Size} (const int s)
+\item 
+virtual void \hyperlink{classMatrix_a0cf31a462707441cbbab037190c88f33}{set\+Matrix} (const int i, const int j, const T x)
+\item 
+\hyperlink{classMatrix}{Matrix}$<$ T $>$ \hyperlink{classMatrix_afe686234b6fe54ab2ae7f500777ca560}{transpose} () const 
+\item 
+virtual T \hyperlink{classMatrix_af786e95d49ae55d42c3bd6824a64e032}{operator()} (const int i, const int j) const 
+\item 
+virtual bool \hyperlink{classMatrix_ab5deedc9644d1b8c6bc220dd336f0102}{is\+Diag\+Dom} () const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classMatrix_ad39022f082bfee09e24d098796e14e10}{clear} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMyArray}{My\+Array}$<$ \hyperlink{classMyArray}{My\+Array}$<$ T $>$ $>$ \hyperlink{classMatrix_a3190abe45497430b3aa006002af3cb37}{m\+\_\+matrix}
+\item 
+int \hyperlink{classMatrix_a1113fd527e7677a93e88d1e736450968}{m\+\_\+size}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classMatrix_a7a26ce88f9d928002eba0af6847a0b44}{operator} (ostream \&out, \hyperlink{classMatrix}{Matrix}$<$ T $>$ \&mat)
+\item 
+istream \& \hyperlink{classMatrix_a175cb81129f42ab801259469bc7cc7a0}{operator$>$$>$} (istream \&in, \hyperlink{classMatrix}{Matrix}$<$ T $>$ \&mat)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\\*
+class Matrix$<$ T $>$}
+
+\hyperlink{classMatrix}{Matrix} calss Reprents a NxN \hyperlink{classMatrix}{Matrix} contains a\+: m\+\_\+size -\/ represting the size of N m\+\_\+matrix -\/ an my\+Array of my\+Arrays represting the matrix 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{Matrix()}{Matrix()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Matrix}$<$ T $>$\+::{\bf Matrix} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classMatrix_a9d567e3a121b1be0c3f9c461cab524fe}{}\label{classMatrix_a9d567e3a121b1be0c3f9c461cab524fe}
+defult constructor. A new \hyperlink{classMatrix}{Matrix} is craeted with N equals 0. \begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a \hyperlink{classMatrix}{Matrix} is born! 
+\end{DoxyPostcond}
+\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{Matrix(const int n)}{Matrix(const int n)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Matrix}$<$ T $>$\+::{\bf Matrix} (
+\begin{DoxyParamCaption}
+\item[{const int}]{n}
+\end{DoxyParamCaption}
+)}\hypertarget{classMatrix_a19ffa179320a60ab6aeb0910f062895f}{}\label{classMatrix_a19ffa179320a60ab6aeb0910f062895f}
+initialize constructor. A new \hyperlink{classMatrix}{Matrix} is craeted with dimensions equel to \char`\"{}n\char`\"{} \begin{DoxyPrecond}{Precondition}
+size must be bigger then 0! Will throw a a length Error otherwise 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a \hyperlink{classMatrix}{Matrix} is born! 
+\end{DoxyPostcond}
+\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{Matrix(const Matrix$<$ T $>$ \&rhs)}{Matrix(const Matrix< T > &rhs)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Matrix}$<$ T $>$\+::{\bf Matrix} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Matrix}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)}\hypertarget{classMatrix_a6a46705243036bfeee78fe2c84c54340}{}\label{classMatrix_a6a46705243036bfeee78fe2c84c54340}
+copy constructor. A new Marix is craeted with size equel to R\+HS size. \begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a \hyperlink{classMatrix}{Matrix} is born! 
+\end{DoxyPostcond}
+\index{Matrix@{Matrix}!````~Matrix@{$\sim$\+Matrix}}
+\index{````~Matrix@{$\sim$\+Matrix}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{$\sim$\+Matrix()}{~Matrix()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Matrix}$<$ T $>$\+::$\sim${\bf Matrix} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classMatrix_a91aa704de674203e96aece9e1955ccd3}{}\label{classMatrix_a91aa704de674203e96aece9e1955ccd3}
+deconstructor.
+
+An Arnold Schwarzenegger Terminates the pointer to avoid Skynet taking over with their memorey Leacks. \char`\"{} Hasta La Vista , Pointer \char`\"{} \index{Matrix@{Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{Matrix(\+Matrix \&\&rhs)}{Matrix(Matrix &&rhs)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf Matrix}$<$ T $>$\+::{\bf Matrix} (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}$<$ T $>$ \&\&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classMatrix_ac503fc6ce19453907fd9ad85133fef39}{}\label{classMatrix_ac503fc6ce19453907fd9ad85133fef39}
+move constructor. A new \hyperlink{classMatrix}{Matrix} is craeted with Size equel to R\+HS size \begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a \hyperlink{classMatrix}{Matrix} is born! 
+\end{DoxyPostcond}
+
+
+\subsection{Member Function Documentation}
+\index{Matrix@{Matrix}!clear@{clear}}
+\index{clear@{clear}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{clear()}{clear()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Matrix}$<$ T $>$\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classMatrix_ad39022f082bfee09e24d098796e14e10}{}\label{classMatrix_ad39022f082bfee09e24d098796e14e10}
+clear dealoctes matrix \begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+none 
+\end{DoxyPostcond}
+\index{Matrix@{Matrix}!get\+Matrix@{get\+Matrix}}
+\index{get\+Matrix@{get\+Matrix}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{get\+Matrix() const }{getMatrix() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf My\+Array}$<${\bf My\+Array}$<$T$>$ $>$ {\bf Matrix}$<$ T $>$\+::get\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classMatrix_afba2ee1c4e106b78099350d070ae1e51}{}\label{classMatrix_afba2ee1c4e106b78099350d070ae1e51}
+get matrix returns m\+\_\+matrix \begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+none 
+\end{DoxyPostcond}
+\index{Matrix@{Matrix}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{get\+Size() const }{getSize() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ int {\bf Matrix}$<$ T $>$\+::get\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classMatrix_aa5d12d49bec4b4876f1a60c54a197ed7}{}\label{classMatrix_aa5d12d49bec4b4876f1a60c54a197ed7}
+get size!
+
+\begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+none 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+size of Martix 
+\end{DoxyReturn}
+\index{Matrix@{Matrix}!is\+Diag\+Dom@{is\+Diag\+Dom}}
+\index{is\+Diag\+Dom@{is\+Diag\+Dom}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{is\+Diag\+Dom() const }{isDiagDom() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf Matrix}$<$ T $>$\+::is\+Diag\+Dom (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classMatrix_ab5deedc9644d1b8c6bc220dd336f0102}{}\label{classMatrix_ab5deedc9644d1b8c6bc220dd336f0102}
+is diagonally dominant returns true if matrix is diagonally dominant. false otherwise. \begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+none 
+\end{DoxyPostcond}
+
+
+Reimplemented in \hyperlink{classsymMatrix_a43d26e87d92d368544b9bd6384da8121}{sym\+Matrix$<$ T $>$}.
+
+\index{Matrix@{Matrix}!operator()@{operator()}}
+\index{operator()@{operator()}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{operator()(const int i, const int j) const }{operator()(const int i, const int j) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ T {\bf Matrix}$<$ T $>$\+::{\bf operator}() (
+\begin{DoxyParamCaption}
+\item[{const int}]{i, }
+\item[{const int}]{j}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classMatrix_af786e95d49ae55d42c3bd6824a64e032}{}\label{classMatrix_af786e95d49ae55d42c3bd6824a64e032}
+operaotr () returns value of m\+\_\+matrix\mbox{[}i\mbox{]}\mbox{[}j\mbox{]} \begin{DoxyPrecond}{Precondition}
+0 $<$ i,j $<$size 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+none 
+\end{DoxyPostcond}
+
+
+Reimplemented in \hyperlink{classsymMatrix_a92bbf3194f8bf52559ee19ba706dd15c}{sym\+Matrix$<$ T $>$}.
+
+\index{Matrix@{Matrix}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{operator$\ast$(const Matrix$<$ T $>$ \&rhs) const }{operator*(const Matrix< T > &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Matrix}$<$ T $>$ {\bf Matrix}$<$ T $>$\+::{\bf operator}$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Matrix}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classMatrix_a358516deb804403fb91256a5a269d1e2}{}\label{classMatrix_a358516deb804403fb91256a5a269d1e2}
+\hyperlink{classMatrix}{Matrix} multiplication caclualtes the multiplication of 2 matrixs and returens a new matrix with the calculated values \begin{DoxyPrecond}{Precondition}
+size of CO must be equel to rhs, Will throw a a length Error otherwise. \char`\"{}$\ast$\char`\"{} binary operator must be defiend for T. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a matrix is born! 
+\end{DoxyPostcond}
+
+
+Reimplemented in \hyperlink{classsymMatrix_a4c1a9a20ab9bd68aca9f9d35d25e0e36}{sym\+Matrix$<$ T $>$}.
+
+\index{Matrix@{Matrix}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{operator$\ast$(const My\+Array$<$ T $>$ \&rhs) const }{operator*(const MyArray< T > &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf My\+Array}$<$ T $>$ {\bf Matrix}$<$ T $>$\+::{\bf operator}$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf My\+Array}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classMatrix_a70c46247336f74291cc3e1b2fb800a34}{}\label{classMatrix_a70c46247336f74291cc3e1b2fb800a34}
+\hyperlink{classMatrix}{Matrix} -\/ Vector multiplication caclualtes the multiplication of 2 of a \hyperlink{classMatrix}{Matrix} with an Array and returens a new Vector with the calculated values \begin{DoxyPrecond}{Precondition}
+size of CO must be equel to rhs array size! Will throw a a length Error otherwise. \char`\"{}$\ast$\char`\"{} binary operator must be defiend for T. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a Vector is born! 
+\end{DoxyPostcond}
+
+
+Reimplemented in \hyperlink{classsymMatrix_aa7adbc9378944126e08af6072ff648eb}{sym\+Matrix$<$ T $>$}.
+
+\index{Matrix@{Matrix}!operator+@{operator+}}
+\index{operator+@{operator+}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{operator+(const Matrix$<$ T $>$ \&rhs) const }{operator+(const Matrix< T > &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Matrix}$<$ T $>$ {\bf Matrix}$<$ T $>$\+::{\bf operator}+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Matrix}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classMatrix_a9db4b4074daa2112eab910c7902fc5d9}{}\label{classMatrix_a9db4b4074daa2112eab910c7902fc5d9}
+
+\begin{DoxyItemize}
+\item operator adds the sum of CO to rhs, retures a new \hyperlink{classMatrix}{Matrix} with the calculated values \begin{DoxyPrecond}{Precondition}
+size of CO must be equel to rhs, Will throw a a length Error otherwise. \char`\"{}+\char`\"{} binary operator must be defiend for T. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a matrix is born! 
+\end{DoxyPostcond}
+
+\end{DoxyItemize}
+
+Reimplemented in \hyperlink{classsymMatrix_a47071a21daf752e9a378c593ef85dbb2}{sym\+Matrix$<$ T $>$}.
+
+\index{Matrix@{Matrix}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{operator-\/(const Matrix$<$ T $>$ \&rhs) const }{operator-(const Matrix< T > &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Matrix}$<$ T $>$ {\bf Matrix}$<$ T $>$\+::{\bf operator}-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Matrix}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classMatrix_a06a7f018ed353f0a8239a80ec8403be6}{}\label{classMatrix_a06a7f018ed353f0a8239a80ec8403be6}
+
+\begin{DoxyItemize}
+\item operator caclualtes the differnce of CO to rhs, retures a new \hyperlink{classMatrix}{Matrix} with the calculated values \begin{DoxyPrecond}{Precondition}
+size of CO must be equel to rhs, Will throw a a length Error otherwise. \char`\"{}-\/\char`\"{} binary operator must be defiend for T. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a matrix is born! 
+\end{DoxyPostcond}
+
+\end{DoxyItemize}
+
+Reimplemented in \hyperlink{classsymMatrix_aaa418f9273ccc5da9d01c645e78ef657}{sym\+Matrix$<$ T $>$}.
+
+\index{Matrix@{Matrix}!operator=@{operator=}}
+\index{operator=@{operator=}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{operator=(const Matrix$<$ T $>$ \&rhs)}{operator=(const Matrix< T > &rhs)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Matrix}$<$ T $>$ \& {\bf Matrix}$<$ T $>$\+::{\bf operator}= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Matrix}$<$ T $>$ \&}]{rhs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classMatrix_a01990eb2552555d37c83272125be68e6}{}\label{classMatrix_a01990eb2552555d37c83272125be68e6}
+= assignment turns the CO \hyperlink{classMatrix}{Matrix} into R\+HS matix \begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+none 
+\end{DoxyPostcond}
+\index{Matrix@{Matrix}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{operator[](const int i) const }{operator[](const int i) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ const {\bf My\+Array}$<$ T $>$ \& {\bf Matrix}$<$ T $>$\+::{\bf operator}\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{const int}]{i}
+\end{DoxyParamCaption}
+) const}\hypertarget{classMatrix_a7b67f79f397146216c40197642ee4a44}{}\label{classMatrix_a7b67f79f397146216c40197642ee4a44}
+object getter \mbox{[}\mbox{]} const
+
+\begin{DoxyPrecond}{Precondition}
+0 $<$ i $<$ size, will throw a a length Error otherwise 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+none 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Will return the \hyperlink{classMyArray}{My\+Array} at index i. 
+\end{DoxyReturn}
+\index{Matrix@{Matrix}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{operator[](const int i)}{operator[](const int i)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf My\+Array}$<$ T $>$ \& {\bf Matrix}$<$ T $>$\+::{\bf operator}\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{const int}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{classMatrix_a0d41726a8cfe08d0339f29a5b956f319}{}\label{classMatrix_a0d41726a8cfe08d0339f29a5b956f319}
+object getter \mbox{[}\mbox{]} non-\/const
+
+\begin{DoxyPrecond}{Precondition}
+0 $<$ i $<$ size, will throw a a length Error otherwise 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+none 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Will return the \hyperlink{classMyArray}{My\+Array} at index i. 
+\end{DoxyReturn}
+\index{Matrix@{Matrix}!scaler\+Multi@{scaler\+Multi}}
+\index{scaler\+Multi@{scaler\+Multi}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{scaler\+Multi(const T scaler)}{scalerMulti(const T scaler)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Matrix}$<$ T $>$\+::scaler\+Multi (
+\begin{DoxyParamCaption}
+\item[{const T}]{scaler}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classMatrix_aba8c673e5ca3bcc56a9bad1a1c0fed23}{}\label{classMatrix_aba8c673e5ca3bcc56a9bad1a1c0fed23}
+\hyperlink{classMatrix}{Matrix} Scaler multiplication caclualtes the multiplication of a matrixs with a scaler and modifies the CO m\+\_\+matrix with calculation \begin{DoxyPrecond}{Precondition}
+\char`\"{}$\ast$\char`\"{} binary operator must be defiend for T. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+none 
+\end{DoxyPostcond}
+
+
+Reimplemented in \hyperlink{classsymMatrix_a75cb07e28a2ef936e45a7e3324429667}{sym\+Matrix$<$ T $>$}.
+
+\index{Matrix@{Matrix}!set\+Matrix@{set\+Matrix}}
+\index{set\+Matrix@{set\+Matrix}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{set\+Matrix(const int i, const int j, const T x)}{setMatrix(const int i, const int j, const T x)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Matrix}$<$ T $>$\+::set\+Matrix (
+\begin{DoxyParamCaption}
+\item[{const int}]{i, }
+\item[{const int}]{j, }
+\item[{const T}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classMatrix_a0cf31a462707441cbbab037190c88f33}{}\label{classMatrix_a0cf31a462707441cbbab037190c88f33}
+set matrix! changes value of m\+\_\+matrix\mbox{[}i\mbox{]}\mbox{[}j\mbox{]} to x \begin{DoxyPrecond}{Precondition}
+0 $<$ i,j $<$ size. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+m\+\_\+matrix modified 
+\end{DoxyPostcond}
+
+
+Reimplemented in \hyperlink{classsymMatrix_a28d1f286c0a8572a26441afd635cba51}{sym\+Matrix$<$ T $>$}.
+
+\index{Matrix@{Matrix}!set\+Size@{set\+Size}}
+\index{set\+Size@{set\+Size}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{set\+Size(const int s)}{setSize(const int s)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Matrix}$<$ T $>$\+::set\+Size (
+\begin{DoxyParamCaption}
+\item[{const int}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classMatrix_a1add3e066eaaa19d5056fc6e2cbc767c}{}\label{classMatrix_a1add3e066eaaa19d5056fc6e2cbc767c}
+set size!
+
+\begin{DoxyPrecond}{Precondition}
+s must be postive 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+none 
+\end{DoxyPostcond}
+
+
+Reimplemented in \hyperlink{classsymMatrix_a06379c2668a6b1fba8b133d753a8f57c}{sym\+Matrix$<$ T $>$}.
+
+\index{Matrix@{Matrix}!switch\+Rows@{switch\+Rows}}
+\index{switch\+Rows@{switch\+Rows}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{switch\+Rows(const int i, const int j)}{switchRows(const int i, const int j)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Matrix}$<$ T $>$\+::switch\+Rows (
+\begin{DoxyParamCaption}
+\item[{const int}]{i, }
+\item[{const int}]{j}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classMatrix_a23bb949d4b4256dd253808e35d73d4b9}{}\label{classMatrix_a23bb949d4b4256dd253808e35d73d4b9}
+Row switcher switches the array at index i with array at index j and vice versa \begin{DoxyPrecond}{Precondition}
+0 $<$ i,j $<$ m\+\_\+size, will throw a a length Error otherwise 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+none 
+\end{DoxyPostcond}
+\index{Matrix@{Matrix}!transpose@{transpose}}
+\index{transpose@{transpose}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{transpose() const }{transpose() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Matrix}$<$ T $>$ {\bf Matrix}$<$ T $>$\+::transpose (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classMatrix_afe686234b6fe54ab2ae7f500777ca560}{}\label{classMatrix_afe686234b6fe54ab2ae7f500777ca560}
+\hyperlink{classMatrix}{Matrix} transpose calculator Creates a new matrix with is a trasposed version of the CO \begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a \hyperlink{classMatrix}{Matrix} is born 
+\end{DoxyPostcond}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{Matrix@{Matrix}!operator@{operator}}
+\index{operator@{operator}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{operator}{operator}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ ostream\& operator (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{out, }
+\item[{{\bf Matrix}$<$ T $>$ \&}]{mat}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classMatrix_a7a26ce88f9d928002eba0af6847a0b44}{}\label{classMatrix_a7a26ce88f9d928002eba0af6847a0b44}
+Stream insertion operator for {\ttfamily \hyperlink{classMatrix}{Matrix}}.
+
+\begin{DoxyPrecond}{Precondition}
+Stream insertion operator is defined for {\ttfamily T}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The contents of the m\+\_\+matrix are printed to the ouptut stream. Each array is printed on a new row. 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+the modified output stream. 
+\end{DoxyReturn}
+\index{Matrix@{Matrix}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{operator$>$$>$}{operator>>}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ istream\& {\bf operator}$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{istream \&}]{in, }
+\item[{{\bf Matrix}$<$ T $>$ \&}]{mat}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classMatrix_a175cb81129f42ab801259469bc7cc7a0}{}\label{classMatrix_a175cb81129f42ab801259469bc7cc7a0}
+Stream insertion operator for {\ttfamily \hyperlink{classMatrix}{Matrix}}.
+
+\begin{DoxyPrecond}{Precondition}
+Stream insertion operator is defined for {\ttfamily T}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+the m\+\_\+matrix if filled with the input 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+the modified input stream. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\index{Matrix@{Matrix}!m\+\_\+matrix@{m\+\_\+matrix}}
+\index{m\+\_\+matrix@{m\+\_\+matrix}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{m\+\_\+matrix}{m_matrix}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf My\+Array}$<${\bf My\+Array}$<$T$>$ $>$ {\bf Matrix}$<$ T $>$\+::m\+\_\+matrix\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classMatrix_a3190abe45497430b3aa006002af3cb37}{}\label{classMatrix_a3190abe45497430b3aa006002af3cb37}
+the matrix (Array of array\textquotesingle{}s) \index{Matrix@{Matrix}!m\+\_\+size@{m\+\_\+size}}
+\index{m\+\_\+size@{m\+\_\+size}!Matrix@{Matrix}}
+\subsubsection[{\texorpdfstring{m\+\_\+size}{m_size}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ int {\bf Matrix}$<$ T $>$\+::m\+\_\+size\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classMatrix_a1113fd527e7677a93e88d1e736450968}{}\label{classMatrix_a1113fd527e7677a93e88d1e736450968}
+size var 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{matrix_8h}{matrix.\+h}\item 
+matrix.\+hpp\end{DoxyCompactItemize}

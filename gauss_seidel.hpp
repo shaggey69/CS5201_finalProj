@@ -11,6 +11,8 @@ MyArray<T> gauss_seidel<T>::operator()(const symMatrix<T> & arr, const MyArray<T
 {
 	if (arr.getSize() != vec.getSize())
 		throw std::length_error("Matrix and array must be of same size!");
+	if (!arr.isDiagDom())
+		throw std::length_error("Matrix must be Diagonal Dominate!");
 	
 	MyArray<T> previous_Ans(vec);
 

@@ -1,0 +1,43 @@
+\hypertarget{classdeepDec}{}\section{deep\+Dec$<$ T $>$ Class Template Reference}
+\label{classdeepDec}\index{deep\+Dec$<$ T $>$@{deep\+Dec$<$ T $>$}}
+
+
+{\ttfamily \#include $<$deepdec.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMyArray}{My\+Array}$<$ T $>$ \hyperlink{classdeepDec_a4984e6083a3b5ab7eb22e0576d6d4b8b}{operator()} (const \hyperlink{classsymMatrix}{sym\+Matrix}$<$ T $>$ mat, const \hyperlink{classMyArray}{My\+Array}$<$ T $>$ arr) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\\*
+class deep\+Dec$<$ T $>$}
+
+the steepest descent calculation class 
+
+\subsection{Member Function Documentation}
+\index{deep\+Dec@{deep\+Dec}!operator()@{operator()}}
+\index{operator()@{operator()}!deep\+Dec@{deep\+Dec}}
+\subsubsection[{\texorpdfstring{operator()(const sym\+Matrix$<$ T $>$ mat, const My\+Array$<$ T $>$ arr) const }{operator()(const symMatrix< T > mat, const MyArray< T > arr) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf My\+Array}$<$ T $>$ {\bf deep\+Dec}$<$ T $>$\+::operator() (
+\begin{DoxyParamCaption}
+\item[{const {\bf sym\+Matrix}$<$ T $>$}]{mat, }
+\item[{const {\bf My\+Array}$<$ T $>$}]{arr}
+\end{DoxyParamCaption}
+) const}\hypertarget{classdeepDec_a4984e6083a3b5ab7eb22e0576d6d4b8b}{}\label{classdeepDec_a4984e6083a3b5ab7eb22e0576d6d4b8b}
+Operator () calculator! \begin{DoxyPrecond}{Precondition}
+T must have the\+: \char`\"{}$\ast$\char`\"{} \char`\"{}/\char`\"{} \char`\"{}-\/\char`\"{} binary operators defiend for it 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a New Array$<$\+T$>$ is born 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+steepest descent result for Ax=b. Where A is the Symetric \hyperlink{classMatrix}{Matrix} and b is the Array 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{deepdec_8h}{deepdec.\+h}\item 
+deepdec.\+hpp\end{DoxyCompactItemize}

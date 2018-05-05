@@ -266,7 +266,7 @@ class Matrix
 	  * \post a Matrix is born
 	  */
 
-		virtual Matrix<T> transpose() const ;
+		Matrix<T> transpose() const ;
 	
 		/*! operaotr ()
 		* returns value of m_matrix[i][j]

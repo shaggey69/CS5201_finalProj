@@ -28,7 +28,7 @@ int main()
 	MyArray<double> my_ans_GS;
 	MyArray<double> my_ans_SD;
 
-	mesh<double> myMesh(30);
+	mesh<double> myMesh(4);
 
 	//mySymMatrix = myMesh.getMesh_mat();
 	//myArray = myMesh.getMesh_vect();
